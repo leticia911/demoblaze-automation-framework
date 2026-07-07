@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="DemoBlaze">
+
+    <listeners>
+
+        <listener class-name="tests.listeners.TestListener"/>
+
+    </listeners>
+
+    <test name="Regression">
+
+        <classes>
+
+            <class name="tests.CP001NavigationTest"/>
+
+        </classes>
+
+    </test>
+
+</suite>

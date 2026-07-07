@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM
+        "https://testng.org/testng-1.0.dtd">
+
+<suite name="DemoBlaze Suite">
+
+    <test name="CP001">
+
+        <classes>
+
+            <class name=
+                           "tests.CP001NavigationTest"/>
+
+        </classes>
+
+    </test>
+
+</suite>
