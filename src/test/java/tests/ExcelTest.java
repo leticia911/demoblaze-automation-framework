@@ -9,9 +9,13 @@ public class ExcelTest {
     @Test
     public void readExcelTest() {
 
-        LoginData login =
-                LoginRepository.getById(1);
+        // Se crea una instancia del repositorio para acceder a los datos del Excel.
+        LoginRepository repository = new LoginRepository();
 
+        // Obtiene el registro con ID = 1.
+        LoginData login = repository.getById(1);
+
+        // Muestra el registro obtenido en la consola.
         System.out.println(login);
 
     }
