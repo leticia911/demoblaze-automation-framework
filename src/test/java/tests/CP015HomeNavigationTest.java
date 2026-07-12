@@ -6,13 +6,51 @@ import pages.HomePage;
 import pages.ProductPage;
 import utils.AssertionManager;
 
+/**
+ * ===============================================================
+ * Historia Jira:
+ * DA-5
+ *
+ * Caso de Uso:
+ * CU-002
+ *
+ * Caso de Prueba:
+ * CP-015
+ *
+ * Título:
+ * Navegación al Home mediante el enlace Home.
+ *
+ * Objetivo:
+ * Verificar que el usuario pueda regresar a la página principal
+ * utilizando el enlace "Home" disponible en la barra superior
+ * de navegación.
+ *
+ * Criterios de aceptación cubiertos:
+ *
+ * CA-001:
+ * El enlace Home redirige correctamente a la página principal.
+ *
+ * CA-002:
+ * La URL corresponde al Home de DemoBlaze.
+ *
+ * CA-003:
+ * El catálogo de productos vuelve a visualizarse correctamente.
+ *
+ * Automatización:
+ * Selenium WebDriver + Java + TestNG
+ *
+ * Patrón:
+ * Page Object Model (POM)
+ * ===============================================================
+ */
 public class CP015HomeNavigationTest extends BaseTest {
 
     @Test(description = "CP-015 - Verificar navegación al Home desde el enlace Home")
     public void verifyNavigationUsingHomeLink() {
 
         // Se instancia la página principal de DemoBlaze.
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage =
+                new HomePage(driver);
 
         // ============================================================
         // Paso 1:
@@ -27,9 +65,6 @@ public class CP015HomeNavigationTest extends BaseTest {
         // ============================================================
         // Verificación intermedia:
         // Confirmar que la página del producto cargó correctamente.
-        // Esta validación mejora la estabilidad del test y evita
-        // intentar interactuar con una página que aún no terminó
-        // de renderizar.
         // ============================================================
 
         AssertionManager.assertTrue(
